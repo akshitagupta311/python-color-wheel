@@ -27,7 +27,7 @@ def hexa2rgb(a):
     b = b[4:6]
     print(r,g,b)
     rgb = [int(r,16),int(g,16),int(b,16)]
-    print(rgb)
+    return (rgb)
 
 def rgb2hexa(r,g,b):
     

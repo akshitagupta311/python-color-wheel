@@ -8,8 +8,26 @@
 
 </head>
 <body>
-    <input type="text">
-    <button onclick="sendvalue">Send</button>
+    <input id="inputBar" type="text">
+    <button onclick=sendValue(event)>Send</button>
+
+    <script>
+        function sendValue(event) {
+            var value = document.getElementById("inputBar").value;
+            console.log(value);
+
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:5000/calculate-color",
+                data: value,
+                success: hogayaPost
+            });
+        }
+
+        function hogayaPost () {
+            console.log("Prffff");
+        }
+    </script>
     
 </body>
 </html>
